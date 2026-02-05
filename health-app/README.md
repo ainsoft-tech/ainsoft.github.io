@@ -25,3 +25,5 @@ php -r "echo password_hash('Sifre123', PASSWORD_DEFAULT);"
 - İletişim formu (PDO ile kayıt)
 - Admin panel üzerinden hizmet ekleme/silme
 - Gelen mesajları görüntüleme
+- Danışan kayıt, düzenleme, silme ve durum takibi
+- Randevu planlama, düzenleme, silme ve durum takibi

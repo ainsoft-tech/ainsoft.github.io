@@ -20,11 +20,23 @@ if (!is_admin_logged_in() && basename($_SERVER['PHP_SELF']) !== 'login.php') {
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
     <div class="container">
         <a class="navbar-brand" href="dashboard.php">Admin Panel</a>
-        <div class="d-flex gap-2">
-            <a class="btn btn-outline-light" href="../public/index.php">Siteyi Görüntüle</a>
-            <?php if (is_admin_logged_in()) : ?>
-                <a class="btn btn-light" href="logout.php">Çıkış</a>
-            <?php endif; ?>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="adminNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="dashboard.php">Genel Bakış</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.php">Hizmetler</a></li>
+                <li class="nav-item"><a class="nav-link" href="patients.php">Danışanlar</a></li>
+                <li class="nav-item"><a class="nav-link" href="appointments.php">Randevular</a></li>
+                <li class="nav-item"><a class="nav-link" href="messages.php">Mesajlar</a></li>
+            </ul>
+            <div class="d-flex gap-2">
+                <a class="btn btn-outline-light" href="../public/index.php">Siteyi Görüntüle</a>
+                <?php if (is_admin_logged_in()) : ?>
+                    <a class="btn btn-light" href="logout.php">Çıkış</a>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 </nav>
